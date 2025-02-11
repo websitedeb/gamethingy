@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@web_dev_guy/jdb-js": "^1.0.32",
+    "axios": "^1.7.9",
+    "concurrently": "^9.1.2",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test-both": "npx concurrently \"node server.js\" \"node server.test.mjs\"",
+    "test": "node server.test.mjs"
+  }
+}
