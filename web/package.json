@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test-both": "npx concurrently \"node server.js\" \"node server.test.mjs\"",
+    "test-both": "npx concurrently \"npm run start\" \"npm run test\"",
     "test": "node server.test.mjs"
   }
 }

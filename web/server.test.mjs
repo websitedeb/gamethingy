@@ -17,15 +17,24 @@ fetch("http://localhost:3000/register", {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
         name: "obby",
-        creator: "sarthak ghoshal",
-        desc: "cool obby i made",
-        prog: py
+        prog: btoa(py)
     })
 })
 .then(res => res.text())
 .then(data => console.log(data))
 .catch(err => console.error(err));
 
+fetch("http://localhost:3000/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+        name: "tycoon",
+        prog: btoa(py)
+    })
+})
+.then(res => res.text())
+.then(data => console.log(data))
+.catch(err => console.error(err));
 
 const config2 = {
     headers: {
@@ -34,5 +43,5 @@ const config2 = {
 };
     
 axios.get("http://localhost:3000/req", config2)
-    .then(response => console.log(response.data))
+    .then(response => console.log(atob(response.data.code)))
     .catch(error => console.error(error));

@@ -1,1 +1,5 @@
-/node_modules
+/web/node_modules
+/client/__pycache__
+/client/utils/__pycache__
+/web/package-lock.json
+/web/package.json
